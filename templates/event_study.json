@@ -1,0 +1,8 @@
+{
+  "benchmark": "SPY",
+  "estimation_sessions": 120,
+  "gap_sessions": 10,
+  "window_start": -10,
+  "window_end": 10,
+  "reject_overlaps": true
+}

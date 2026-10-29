@@ -1,0 +1,27 @@
+event_id,event_date,model,vendor,open_flag,proxy_tickers_json,source_url,source_status
+E01,2023-03-14,GPT-4,OpenAI,0,"[""MSFT""]",https://openai.com/index/gpt-4-research/,HISTORICAL_CATALOG_NOT_REVALIDATED
+E02,2023-07-18,Llama 2,Meta,1,"[""META""]",https://ai.meta.com/llama/,HISTORICAL_CATALOG_NOT_REVALIDATED
+E03,2024-02-15,Gemini 1.5 Pro,Google,0,"[""GOOGL""]",https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/,HISTORICAL_CATALOG_NOT_REVALIDATED
+E04,2024-04-18,Llama 3 (8B/70B),Meta,1,"[""META""]",https://ai.meta.com/blog/meta-llama-3/,HISTORICAL_CATALOG_NOT_REVALIDATED
+E05,2024-05-13,GPT-4o,OpenAI,0,"[""MSFT""]",https://openai.com/index/hello-gpt-4o/,HISTORICAL_CATALOG_NOT_REVALIDATED
+E06,2024-07-23,Llama 3.1 405B,Meta,1,"[""META""]",https://ai.meta.com/blog/meta-llama-3-1/,HISTORICAL_CATALOG_NOT_REVALIDATED
+E07,2024-09-12,o1-preview,OpenAI,0,"[""MSFT""]",https://openai.com/index/learning-to-reason-with-llms/,HISTORICAL_CATALOG_NOT_REVALIDATED
+E08,2024-12-11,Gemini 2.0 Flash,Google,0,"[""GOOGL""]",https://blog.google/technology/google-deepmind/google-gemini-ai-update-december-2024/,HISTORICAL_CATALOG_NOT_REVALIDATED
+E09,2024-12-26,DeepSeek-V3,DeepSeek,1,"[""NVDA""]",https://api-docs.deepseek.com/news/news1210,HISTORICAL_CATALOG_NOT_REVALIDATED
+E10,2025-01-20,DeepSeek-R1,DeepSeek,1,"[""NVDA"", ""MSFT""]",https://api-docs.deepseek.com/news/news250120,HISTORICAL_CATALOG_NOT_REVALIDATED
+E11,2025-02-27,GPT-4.5,OpenAI,0,"[""MSFT""]",https://openai.com/index/introducing-gpt-4-5/,HISTORICAL_CATALOG_NOT_REVALIDATED
+E12,2025-03-25,Gemini 2.5 Pro,Google,0,"[""GOOGL""]",https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/,HISTORICAL_CATALOG_NOT_REVALIDATED
+E13,2025-04-05,Llama 4 (Scout/Maverick),Meta,1,"[""META""]",https://ai.meta.com/blog/llama-4-multimodal-intelligence/,HISTORICAL_CATALOG_NOT_REVALIDATED
+E14,2025-04-14,GPT-4.1,OpenAI,0,"[""MSFT""]",https://openai.com/index/gpt-4-1/,HISTORICAL_CATALOG_NOT_REVALIDATED
+E15,2025-04-29,Qwen3,Alibaba,1,"[""9988.HK""]",https://qwenlm.github.io/blog/qwen3/,HISTORICAL_CATALOG_NOT_REVALIDATED
+E16,2025-08-07,GPT-5,OpenAI,0,"[""MSFT""]",https://openai.com/index/introducing-gpt-5/,HISTORICAL_CATALOG_NOT_REVALIDATED
+E17,2023-11-06,GPT-4 Turbo,OpenAI,0,"[""MSFT""]",https://openai.com/blog/new-models-and-developer-products-announced-at-openai-devday,HISTORICAL_CATALOG_NOT_REVALIDATED
+E18,2023-12-06,Gemini 1.0,Google,0,"[""GOOGL""]",https://blog.google/technology/ai/google-gemini-ai/,HISTORICAL_CATALOG_NOT_REVALIDATED
+E19,2024-09-19,Qwen 2.5,Alibaba,1,"[""9988.HK""]",https://qwenlm.github.io/blog/qwen2.5/,HISTORICAL_CATALOG_NOT_REVALIDATED
+E20,2024-09-23,Llama 3.2,Meta,1,"[""META""]",https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/,HISTORICAL_CATALOG_NOT_REVALIDATED
+E21,2024-12-03,Amazon Nova,Amazon,0,"[""AMZN""]",https://www.aboutamazon.com/news/aws/amazon-nova-artificial-intelligence-bedrock-aws,HISTORICAL_CATALOG_NOT_REVALIDATED
+E22,2024-12-06,Llama 3.3 70B,Meta,1,"[""META""]",https://ai.meta.com/blog/llama-3-3/,HISTORICAL_CATALOG_NOT_REVALIDATED
+E23,2024-12-12,Phi-4,Microsoft,1,"[""MSFT""]",https://www.microsoft.com/en-us/research/blog/phi-4-a-new-generation-of-open-ai-models/,HISTORICAL_CATALOG_NOT_REVALIDATED
+E24,2024-12-20,o3 (preview),OpenAI,0,"[""MSFT""]",https://openai.com/index/o3/,HISTORICAL_CATALOG_NOT_REVALIDATED
+E25,2025-01-31,o3-mini,OpenAI,0,"[""MSFT""]",https://openai.com/index/openai-o3-mini/,HISTORICAL_CATALOG_NOT_REVALIDATED
+E26,2025-02-05,Gemini 2.0 Flash GA,Google,0,"[""GOOGL""]",https://ai.google.dev/gemini-api/docs/changelog,HISTORICAL_CATALOG_NOT_REVALIDATED
