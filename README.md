@@ -1,6 +1,8 @@
-# LLM 金融实证研究
+# LLM-Finance-Research · LLM 金融实证研究
 
-[![tests](https://github.com/Aisiweiyang/llm-finance-research/actions/workflows/tests.yml/badge.svg)](https://github.com/Aisiweiyang/llm-finance-research/actions/workflows/tests.yml)
+**作者与维护者：[Aisiweiyang](https://github.com/Aisiweiyang)**
+
+[![tests](https://github.com/Aisiweiyang/LLM-Finance-Research/actions/workflows/tests.yml/badge.svg)](https://github.com/Aisiweiyang/LLM-Finance-Research/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 这个项目用 Python 研究大模型的 API 价格、模型发布后的股票市场反应，以及相关公司的财务数据。
@@ -16,8 +18,8 @@ Python code for studying LLM API prices, model releases and company financial da
 需要 Python 3.11 或以上。以下命令适用于 PowerShell，也可在其他系统使用相应的 Python 启动方式：
 
 ```powershell
-git clone https://github.com/Aisiweiyang/llm-finance-research.git
-cd llm-finance-research
+git clone https://github.com/Aisiweiyang/LLM-Finance-Research.git
+cd LLM-Finance-Research
 python -m venv .venv
 # Windows
 .\.venv\Scripts\python.exe -m pip install -e ".[dev]"
