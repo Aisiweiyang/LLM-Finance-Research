@@ -1,13 +1,15 @@
-# LLM Finance Research
+# LLM 金融实证研究
 
 [![tests](https://github.com/Aisiweiyang/llm-finance-research/actions/workflows/tests.yml/badge.svg)](https://github.com/Aisiweiyang/llm-finance-research/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-面向大模型产业的金融实证研究工具包：API 定价、能力—价格前沿、发布/披露事件研究、财务现金流面板。提供明确的输入契约、样本排除记录、显式截距回归与可校验的运行产物。
+这个项目用 Python 研究大模型的 API 价格、模型发布后的股票市场反应，以及相关公司的财务数据。
 
-**研究用途。这个版本提供方法和可运行示例，不发布已验证的投资策略，也不把历史探索结果当作已复现的论文结论。**
+目前整理了事件研究、能力与价格比较、面板回归、SEC 现金流数据处理几部分代码。可以用自己的数据运行，也可以先跑仓库里的离线示例。
 
-English: A small, portable empirical-research toolkit for LLM pricing, market-model event studies and SEC cash-flow panels. Offline examples are explicitly synthetic. Real datasets are supplied or retrieved separately; checksums establish integrity, not scientific validity.
+示例使用合成数据。真实行情和模型评测数据需要另行准备，旧项目的探索结果没有作为本版研究结论发布。
+
+Python code for studying LLM API prices, model releases and company financial data.
 
 ## 快速开始
 
@@ -26,15 +28,15 @@ python -m venv .venv
 
 macOS / Linux 使用 `.venv/bin/python`。安装后也可以使用 `llm-finance` 命令。
 
-演示完全离线，包含一组带人为冲击的合成行情和合成模型价格。输出事件 CAR、前沿表、回归表、诊断与 SHA-256 manifest；全部标记为 `SYNTHETIC_DEMO`。演示数据不代表真实市场或模型能力。
+示例会生成合成行情和模型价格，计算 CAR、价格前沿和回归表。结果保存在 output/demo，标记为 `SYNTHETIC_DEMO`。
 
-每次运行使用新的输出目录，已有结果不会被静默覆盖。完整命令见：
+每次运行需要换一个输出目录，避免覆盖旧结果。查看全部命令：
 
 ```powershell
 python -m llm_finance --help
 ```
 
-## 支持的研究流程
+## 功能
 
 | 命令 | 输入 | 输出与范围 |
 |---|---|---|
@@ -67,9 +69,9 @@ python -m llm_finance ols --input output/frontier-v1/frontier.csv --outcome ln_p
 python -m llm_finance ols --input data/private/panel.csv --outcome revenue_growth --features capex_lag1 capex_lag2 --categorical firm quarter --cluster firm --output output/capex-v1
 ```
 
-`capability.csv` 至少含 `model,ability,price`，价格为研究者固定输入/输出权重后的 USD/百万 token。不同指数版本、免费/批量/缓存价、路由别名不能无说明混合。两个回归示例中的额外列需由用户提供；工具不会伪造缺失特征或历史面板。
+`capability.csv` 至少含 `model,ability,price`，价格单位为 USD/百万 token。输入与输出 token 的混合权重、能力指数版本和价格类型需要保持一致。回归示例里的 open_weights、vendor 和滞后变量等列需要自行准备。
 
-### 明确选择的网络采集
+### 下载数据
 
 ```powershell
 # 设置为你自己的机构/项目与联系地址；不把环境变量提交 Git
@@ -78,9 +80,9 @@ python -m llm_finance fetch-sec --cik 789019 --output data/raw/msft-companyfacts
 python -m llm_finance xbrl --input data/raw/msft-companyfacts.json --tag PaymentsToAcquirePropertyPlantAndEquipment --unit USD --output output/msft-cashflow-v1
 ```
 
-SEC 下载入口一次只请求一个公司，不批量爬取。LiteLLM 入口强制完整的 40 位提交 SHA，不能把 `main` 当作可复现版本。真实网络采集与离线方法验证分别记录。
+SEC 命令每次下载一家公司的数据。LiteLLM 下载需要完整的 40 位提交 SHA，方便以后取得同一版本的价格文件。
 
-## 目录与证据边界
+## 目录
 
 ```text
 src/llm_finance/   方法、输入校验、显式采集与 CLI
@@ -91,14 +93,14 @@ docs/             方法、数据条件、历史问题与清理说明
 .github/          多 Python 版本离线 CI
 ```
 
-本项目独立于 Alice 量化系统运行，无 Alice 路径、账户内核或策略依赖。未来可以作为研究方法组件接入；目前未实现 Alice 集成。
+代码可独立运行，不依赖 Alice 量化系统。
 
-- [方法与统计边界](docs/METHODS.md)
+- [计算方法与限制](docs/METHODS.md)
 - [数据来源、许可与字段](docs/DATA_POLICY.md)
 - [历史结果与修正状态](docs/RESEARCH_STATUS.md)
 - [开源整理与删除清单](docs/RELEASE_NOTES.md)
 
 ## License
 
-本仓库自有代码、说明与合成示例采用 [MIT](LICENSE)。第三方原始数据、模型能力指数、行情和供应商价格资料的权利不由本仓库许可证授予，详见数据政策。
+代码和合成示例采用 [MIT](LICENSE) 许可证。第三方数据的使用条件见[数据说明](docs/DATA_POLICY.md)。
 

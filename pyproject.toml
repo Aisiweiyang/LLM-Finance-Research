@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "llm-finance-research"
 version = "0.1.0"
-description = "Auditable building blocks for LLM pricing, event studies and financial panels"
+description = "Code for studying LLM API prices, model releases and company financial data"
 readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
